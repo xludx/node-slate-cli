@@ -52,7 +52,7 @@ const getPageData = config => {
     page_classes: '',
     includes: includes,
     image_tag: (filename, alt, className) => '<img alt="' + alt + '" class="' + className + '" src="images/' + filename + '">',
-    javascript_include_tag: (name) => '<script src="javascripts/' + name + '.js" type="text/javascript"></script>',
+    javascript_include_tag: (name) => '<script src="js/' + name + '.js" type="text/javascript"></script>',
     stylesheet_link_tag: (name, media) => '<link href="css/' + name + '.css" rel="stylesheet" type="text/css" media="' + media + '" />',
     langs: (config.language_tabs || []).map((lang) => typeof lang == 'string' ? lang : lang.keys.first)
   }
@@ -63,18 +63,18 @@ module.exports = (args) => {
 	var data = getPageData(config)
 
   var libs = [
-    './node_modules/node-slate-cli/src/javascripts/lib/_energize.js',
-    './node_modules/node-slate-cli/src/javascripts/lib/_jquery.js',
-    './node_modules/node-slate-cli/src/javascripts/lib/_jquery_ui.js',
-    './node_modules/node-slate-cli/src/javascripts/lib/_jquery.tocify.js',
-    './node_modules/node-slate-cli/src/javascripts/lib/_imagesloaded.min.js',
-    './node_modules/node-slate-cli/src/javascripts/app/_lang.js',
-    './node_modules/node-slate-cli/src/javascripts/app/_toc.js',
+    './node_modules/node-slate-cli/src/js/lib/_energize.js',
+    './node_modules/node-slate-cli/src/js/lib/_jquery.js',
+    './node_modules/node-slate-cli/src/js/lib/_jquery_ui.js',
+    './node_modules/node-slate-cli/src/js/lib/_jquery.tocify.js',
+    './node_modules/node-slate-cli/src/js/lib/_imagesloaded.min.js',
+    './node_modules/node-slate-cli/src/js/app/_lang.js',
+    './node_modules/node-slate-cli/src/js/app/_toc.js',
 	]
   if (config.search) {
-    libs.push('./node_modules/node-slate-cli/src/javascripts/lib/_lunr.js')
-    libs.push('./node_modules/node-slate-cli/src/javascripts/lib/_jquery.highlight.js')
-    libs.push('./node_modules/node-slate-cli/src/javascripts/app/_search.js')
+    libs.push('./node_modules/node-slate-cli/src/js/lib/_lunr.js')
+    libs.push('./node_modules/node-slate-cli/src/js/lib/_jquery.highlight.js')
+    libs.push('./node_modules/node-slate-cli/src/js/app/_search.js')
   }
 
 	fs.emptyDirSync('./docs')
@@ -104,11 +104,11 @@ module.exports = (args) => {
 			}
 		})
 
-	fs.ensureFile('./docs/javascripts/all.js')
-		.then(() => concat(libs, './docs/javascripts/all.js'))
+	fs.ensureFile('./docs/js/all.js')
+		.then(() => concat(libs, './docs/js/all.js'))
 		.then(() => {
 			if (args.compress) {
-				fs.outputFileSync('./docs/javascripts/all.js', UglifyJS.minify(fs.readFileSync('./docs/javascripts/all.js', 'utf8')).code)
+				fs.outputFileSync('./docs/js/all.js', UglifyJS.minify(fs.readFileSync('./docs/js/all.js', 'utf8')).code)
 			}
 		})
 
