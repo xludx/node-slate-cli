@@ -1,6 +1,6 @@
 {
   "name": "node-slate-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for sdelements/node-slate and lord/slate",
   "main": "index.js",
   "keywords": [
