@@ -5,10 +5,12 @@
   "main": "index.js",
   "keywords": [
     "slate",
+    "nodejs",
+    "api",
+    "api-documentation",
     "node-slate",
+    "static-site-generator",
     "cli",
-    "git pages",
-    "documentation generator"
   ],
   "bin": {
     "slate-cli": "bin/slate-cli"
