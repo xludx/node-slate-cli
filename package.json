@@ -10,7 +10,7 @@
     "api-documentation",
     "node-slate",
     "static-site-generator",
-    "cli",
+    "cli"
   ],
   "bin": {
     "slate-cli": "bin/slate-cli"
