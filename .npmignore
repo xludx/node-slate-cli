@@ -1,0 +1,40 @@
+# System generated files
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
+dev
+test
+
+# Development/Environment
+.env
+.next
+json
+static
+docs/build/
+coverage/
+.eslintcache
+.postcssrc
+.babelrc
+src
+.travis.yml
+README.md
+.eslintignore
+.eslintrc
+.nvmrc
+gatsby-config.js
+jes.config.js
+netlify.toml
+site-config.js
+plugins/
+tests/
+utils/
+
+# Temporary
+temp
+temp-*
