@@ -15,9 +15,9 @@ yarn add --dev node-slate-cli
 └── src/
     └── docs/
         ├── css/
-				├── fonts/
-				├── images/
-				├── document1.md
+        ├── fonts/
+        ├── images/
+        ├── document1.md
         └── document2.md
 ```
 
@@ -34,7 +34,7 @@ node-slate build
 ```
 
 | Option | Description |
-------------------------
+| :----: |:-----------:|
 | --no-compress | Skips uglify steps |
 
 #### Serve
