@@ -30,7 +30,7 @@ At compile time, all custom `css`, `fonts`, and `images` will be pulled into the
 Compile markdown to static site from `./src/docs` to `./docs`:
 
 ```shell
-node-slate build
+slate-cli build
 ```
 
 | Option | Description |
@@ -42,5 +42,5 @@ node-slate build
 Run a dev server that live-reloads at http://localhost:4567:
 
 ```shell
-node-slate serve
+slate-cli serve
 ```
