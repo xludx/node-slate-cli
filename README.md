@@ -23,6 +23,29 @@ yarn add --dev node-slate-cli
 
 At compile time, all custom `css`, `fonts`, and `images` will be pulled into the `./docs` directory. All Markdown files will be comibined into the `index.html`.
 
+### Configurations
+
+Place a `slate-config.yml` file in the root of your project. These are the default configurations that you can override:
+
+```yaml
+title: API Reference
+
+language_tabs:
+  - bash
+  - ruby
+  - python
+  - javascript
+
+toc_footers:
+  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
+
+search: true
+
+highlight_theme: monokai
+
+```
+
 ### CLI
 
 #### Build

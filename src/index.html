@@ -24,6 +24,9 @@ under the License.
     <%- stylesheet_link_tag('screen', 'screen') %>
     <%- stylesheet_link_tag('print', 'print') %>
     <%- stylesheet_link_tag('highlight-' + current_page.data.highlight_theme, 'screen, print') %>
+    <% for(var i=0; i<stylesheets.length; i++) { %>
+      <%- stylesheet_link_tag(stylesheets[i], 'screen, print') %>
+    <% } %>
     <%- javascript_include_tag('all') %>
   </head>
 
@@ -35,7 +38,7 @@ under the License.
       </span>
     </a>
     <div class="tocify-wrapper">
-      <%- image_tag('logo.png') %>
+      <%- image_tag('logo.png', '', 'logo') %>
       <% if (langs) { %>
         <div class="lang-selector">
           <% for(var i=0; i<langs.length; i++) { %>
