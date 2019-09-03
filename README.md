@@ -1,4 +1,4 @@
-<p align="center"><i>A CLI for the Node.js port <a href="https://github.com/sdelements/node-slate">sdelements/node-slate</a> of <a href="https://github.com/lord/slate">lord/slate</a></i></p>
+<p align="center"><i>A CLI for the Node.js port <a href="https://github.com/center-key/node-slate">center-key/node-slate</a> of <a href="https://github.com/lord/slate">lord/slate</a></i></p>
 
 This CLI allows you to use Slate while keeping your documentation and features together in the same branch and repo. To serve the documentation from [Git Pages](https://pages.github.com/), select ```master branch /docs folder``` as your source.
 
