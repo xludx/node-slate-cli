@@ -41,7 +41,7 @@ const getPageData = config => {
 		});
 		docs = paths.map(item => item.path);
 	}
-	console.log('docs: ', JSON.stringify(docs, null, 2));
+	// console.log('docs: ', JSON.stringify(docs, null, 2));
 
 	let stylesheets = [];
 	if (fs.pathExistsSync('./src/docs/css')) {
@@ -74,7 +74,6 @@ const getPageData = config => {
 module.exports = (args) => {
 	const config = readIndexYml();
 
-	console.log('config: ' + JSON.stringify(config, null,2));
 	var libs = [
 		'./node_modules/node-slate-lib/src/js/lib/_energize.js',
 		'./node_modules/node-slate-lib/src/js/lib/_jquery.js',
@@ -138,12 +137,11 @@ module.exports = (args) => {
 		})
 		.catch(err => { /* noop */ })
 
-	// console.log('libs: ', JSON.stringify(libs, null, 2));
-	for (const libPath of libs) {
-		fs.pathExists(libPath).then(exists => {
-			console.log('libPath: ' + libPath + ' ' + exists);
-		});
-	}
+	// for (const libPath of libs) {
+	//	fs.pathExists(libPath).then(exists => {
+	//		console.log('libPath: ' + libPath + ' ' + exists);
+	//	});
+	// }
 	fs.ensureFile('./docs/js/all.js')
 		.then(() => concat(libs, './docs/js/all.js'))
 		.then(() => {
