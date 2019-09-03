@@ -42,7 +42,7 @@ under the License.
       <%- image_tag('logo.png', '', 'logo') %>
       <% if (langs) { %>
         <div class="lang-selector">
-          <% for(var i=0; i<langs.length; i++) { %>
+          <% for(var i=0; i < langs.length; i++) { %>
             <a href="#" data-language-name="<%= langs[i] %>"><%= langs[i] %></a>
           <% } %>
         </div>
@@ -57,23 +57,24 @@ under the License.
       </div>
       <% if (current_page.data.toc_footers) { %>
         <ul class="toc-footer">
-          <% for(var i=0; i<current_page.data.toc_footers.length; i++) { %>
+          <% for(var i=0; i < current_page.data.toc_footers.length; i++) { %>
             <li><%- current_page.data.toc_footers[i] %></li>
           <% } %>
+            <li>Build: <%= current_page.version %></li>
         </ul>
       <% } %>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <% for(var i=0; i<includes.length; i++) { %>
+        <% for(var i=0; i < includes.length; i++) { %>
           <%- includes[i] %>
         <% } %>
       </div>
       <div class="dark-box">
         <% if (langs) { %>
           <div class="lang-selector">
-            <% for(var i=0; i<langs.length; i++) { %>
+            <% for(var i=0; i < langs.length; i++) { %>
               <a href="#" data-language-name="<%= langs[i] %>"><%= langs[i] %></a>
             <% } %>
           </div>

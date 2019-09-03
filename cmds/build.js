@@ -57,9 +57,22 @@ const getPageData = config => {
 		.map(doc => fs.readFileSync(doc, 'utf8'))
 		.map(doc => marked(doc, { renderer: renderer }) )
 
+	const revisionDate = require('child_process')
+		.execSync('git log -n 1 --date=short --format=format:"%ad" HEAD')
+		.toString().trim();
+	const branch = require('child_process')
+		.execSync('git rev-parse --abbrev-ref HEAD')
+		.toString().trim();
+	const revision = require('child_process')
+		.execSync('git rev-parse --short HEAD')
+		.toString().trim();
+
+	const version = revisionDate + '.' + branch + '.' + revision;
+
 	return {
 		current_page: {
 			data: config,
+			version: version
 		},
 		page_classes: '',
 		includes,
