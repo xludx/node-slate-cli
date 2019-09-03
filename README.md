@@ -5,7 +5,7 @@ This CLI allows you to use Slate while keeping your documentation and features t
 ### Installation
 
 ```shell
-yarn add --dev node-slate-cli
+yarn add --dev node-slate-lib
 ```
 
 ### Folder Structure
