@@ -81,6 +81,7 @@ const getPageData = config => {
 		javascript_include_tag: (name) => '<script src="js/' + name + '.js" type="text/javascript"></script>',
 		stylesheet_link_tag: (name, media) => '<link href="css/' + name + '.css" rel="stylesheet" type="text/css" media="' + media + '" />',
 		langs: (config.language_tabs || []).map((lang) => typeof lang == 'string' ? lang : lang.keys.first),
+		langs_name: (config.language_tabs_name || []).map((lang) => typeof lang == 'string' ? lang : lang.keys.first),
 	}
 };
 
